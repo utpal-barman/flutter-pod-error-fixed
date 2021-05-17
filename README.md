@@ -3,7 +3,7 @@
 Here are some common Pod related problem fixings that I've faced during developing Flutter apps for iOS.
 
 
-## Module not found on Xcode Macbook
+##1(a) Module not found on Xcode Macbook
 
 The most common problem in flutter with firebase is in it's setup on ios!
 
@@ -35,7 +35,7 @@ It will take some time to install the pod... Have a cup of coffee now.. Woohoo
 
 
 
-## Module not found on Xcode (Alternative solution)
+##1(b) Module not found on Xcode (Alternative solution)
 
 It happens when podfile doesn't contain any dependencies, to solve this problem run these commands on your mac terminal / VS Code terminal, make sure you close Xcode.
 
@@ -53,6 +53,16 @@ It happens when podfile doesn't contain any dependencies, to solve this problem 
 
 `pod install`
 
+
+## iOS pod dependecy version mismatched after pubspec.yaml update
+
+It's actually easy to solve, it's because you updated the packages version, but it didn't refelct on pubspec.lock file, To fix this error just follow this
+
+Navigate to your ios foler first
+`cd ios`
+
+Then write this
+`pod update`
 
 ## `FLUTTER_ROOT` is unknown
 
